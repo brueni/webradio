@@ -1,3 +1,5 @@
 #!/bin/bash
+laststationfile=`cat last-station.txt`
+stream=`cat stations/$laststationfile`
 
-mpg321 http://stream.srg-ssr.ch/m/drs3/mp3_128
+mpg321 $stream
