@@ -1,5 +1,8 @@
 #!/bin/bash
-laststationfile=`cat last-station.txt`
-stream=`cat stations/$laststationfile`
+n=`cat last-station.txt`
+
+files=(stations/*)
+streamfile="${files[n]}"
+stream=`cat $streamfile`
 
 mpg321 $stream
