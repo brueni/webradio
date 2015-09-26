@@ -18,7 +18,7 @@ while True:
     if (GPIO.input(24) == False):
         os.system('./stop.sh &')
  
-#    if (GPIO.input(25)== False):
-#        os.system('mpg123 -q 3.mp3 &')
+    if (GPIO.input(25)== False):
+        os.system('./next.sh &')
  
     sleep(0.5);
