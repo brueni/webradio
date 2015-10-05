@@ -1,10 +1,11 @@
-#!/usr/bin/env python
- 
+#!/usr/bin/env python 
 import os
 from time import sleep
  
 import RPi.GPIO as GPIO
  
+os.chdir(os.path.dirname(os.path.abspath(__file__))) #change cwd to script dir
+
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(23, GPIO.IN) #Button Next
 GPIO.setup(24, GPIO.IN) #Button Play
