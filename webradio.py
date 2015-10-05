@@ -11,14 +11,13 @@ GPIO.setup(24, GPIO.IN)
 GPIO.setup(25, GPIO.IN)
  
 while True:
-    if (GPIO.input(23) == False):
-        os.system('./play.sh &')
-# 	os.spawnl(os.P_NOWAIT, './play.sh &')
-
     if (GPIO.input(24) == False):
+        os.system('./play.sh &')
+
+    if (GPIO.input(25) == False):
         os.system('./stop.sh &')
  
-    if (GPIO.input(25)== False):
+    if (GPIO.input(23)== False):
         os.system('./next.sh &')
  
     sleep(0.5);
